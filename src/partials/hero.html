@@ -1,0 +1,45 @@
+<div class="hero-wrap" data-hero-wrap>
+<section class="hero" id="home" aria-labelledby="hero-title" data-hero data-desk="{{site.hero_desk}}" data-mob="{{site.hero_mob}}">
+  <!-- layers (back → front): sky · clouds · TITLE · house · foreground -->
+  <div class="hero__layer hero__sky" data-hero-scene data-depth="sky">
+    {{pic n="hero-sky" m="hero-m-sky" cls="hero__pic" sizes="100vw" load="eager" prio="1" alt="Modern two-storey villa with a pool and garden under a clear blue sky at Azure Residences"}}
+  </div>
+  <div class="hero__layer hero__clouds" data-hero-scene data-depth="clouds" aria-hidden="true">
+    {{pic n="hero-clouds" m="hero-m-clouds" cls="hero__pic" sizes="100vw" load="eager" alt=""}}
+  </div>
+
+  <h1 class="hero__word" id="hero-title" data-hero-word>
+    <span class="sr-only">Azure Residences, Whitefield Bengaluru. </span><span class="hero__word-text" aria-hidden="true">Azure</span>
+  </h1>
+
+  <div class="hero__layer hero__house" data-hero-scene data-depth="house" aria-hidden="true">
+    {{pic n="hero-house" m="hero-m-house" cls="hero__pic" sizes="100vw" load="eager" alt=""}}
+  </div>
+  <div class="hero__layer hero__fore" data-hero-scene data-depth="fore" aria-hidden="true">
+    {{pic n="hero-fore" m="hero-m-fore" cls="hero__pic" sizes="100vw" load="eager" alt=""}}
+  </div>
+  <div class="hero__scrim" aria-hidden="true"></div>
+
+  <div class="hero__ui">
+    <div class="hero__copy">
+      <p class="hero__tag" data-hero-tag>Luxury Living, <em>Reimagined.</em></p>
+      <p class="hero__sub" data-hero-meta>Sky-facing homes designed for calm, light and living.</p>
+      <div class="hero__cta" data-hero-cta>
+        <a class="btn btn--light" href="properties.html" data-magnetic>
+          <span class="btn__label">Explore Property</span><span class="btn__icon"><svg class="i"><use href="#i-arrow-ur"/></svg></span>
+        </a>
+        <button class="btn btn--glass" type="button" data-open-lead="Schedule a Visit" data-magnetic>
+          <span class="btn__label">Schedule a Visit</span><span class="btn__icon"><svg class="i"><use href="#i-cal"/></svg></span>
+        </button>
+      </div>
+    </div>
+
+    <aside class="hero__card glass" data-hero-meta aria-label="Pricing snapshot">
+      <p class="hero__card-k">Starting from</p>
+      <p class="hero__card-v">₹2.85 <small>Cr*</small></p>
+      <p class="hero__card-s">2, 3 &amp; 4 BHK · Possession Dec 2028</p>
+      <button class="hero__card-link" type="button" data-open-lead="Check Availability">Check availability <svg class="i" aria-hidden="true"><use href="#i-arrow-ur"/></svg></button>
+    </aside>
+  </div>
+</section>
+</div>

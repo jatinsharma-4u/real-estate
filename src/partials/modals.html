@@ -1,0 +1,46 @@
+<!-- Lead modal: centred dialog on desktop (info + form side by side, no scrolling), bottom sheet on phones -->
+<dialog class="modal" id="lead-modal" aria-labelledby="lead-title" data-lead-modal>
+  <div class="modal__panel">
+    <button class="modal__close" type="button" aria-label="Close" data-modal-close><svg class="i"><use href="#i-x"/></svg></button>
+    <aside class="modal__aside" aria-hidden="true">
+      {{pic n="ext-white-pool" sizes="420px" cls="modal__pic" alt="" pos="50% 60%"}}
+      <div class="modal__aside-in">
+        <p class="modal__aside-k">Azure Residences</p>
+        <p class="modal__aside-t">Whitefield, Bengaluru</p>
+        <ul class="modal__aside-l">
+          <li><svg class="i"><use href="#i-check"/></svg>Price sheet &amp; payment plans</li>
+          <li><svg class="i"><use href="#i-check"/></svg>Priority access to floors</li>
+          <li><svg class="i"><use href="#i-check"/></svg>Complimentary site visit</li>
+        </ul>
+      </div>
+    </aside>
+    <div class="modal__main">
+      <div class="modal__head">
+        <p class="eyebrow" data-lead-context>Schedule a Visit</p>
+        <h2 class="modal__title" id="lead-title" data-lead-title>Schedule a private visit</h2>
+        <p class="modal__sub" data-lead-sub>Choose a day that suits you and we'll arrange everything, including pick-up.</p>
+      </div>
+      <div class="modal__body" data-form-mount="modal"></div>
+    </div>
+  </div>
+</dialog>
+
+<!-- Lightbox -->
+<dialog class="lb" id="lightbox" aria-label="Image viewer" data-lightbox>
+  <div class="lb__bar">
+    <p class="lb__count" aria-live="polite"><b data-lb-cur>1</b> / <span data-lb-total>1</span></p>
+    <div class="lb__tools">
+      <button class="lb__btn" type="button" aria-label="Toggle full screen" data-lb-fs><svg class="i"><use href="#i-max"/></svg></button>
+      <button class="lb__btn" type="button" aria-label="Close viewer" data-lb-close><svg class="i"><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+  <div class="lb__stage" data-lb-stage data-cursor="Drag">
+    <figure class="lb__fig" data-lb-fig><img alt="" data-lb-img></figure>
+  </div>
+  <button class="lb__nav lb__nav--prev" type="button" aria-label="Previous image" data-lb-prev><svg class="i"><use href="#i-arrow-l"/></svg></button>
+  <button class="lb__nav lb__nav--next" type="button" aria-label="Next image" data-lb-next><svg class="i"><use href="#i-arrow-r"/></svg></button>
+  <p class="lb__cap" data-lb-cap></p>
+</dialog>
+
+<!-- Toast for non-blocking notices -->
+<div class="toast" role="status" aria-live="polite" data-toast></div>

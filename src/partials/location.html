@@ -1,0 +1,56 @@
+<section class="loc section" id="location" aria-labelledby="loc-title" data-location data-lat="12.9716" data-lng="77.7510">
+  <div class="container">
+    <header class="sec-head">
+      <div>
+        <p class="eyebrow" data-reveal>Neighbourhood</p>
+        <h2 class="h2" id="loc-title" data-split="lines">Close to <em>everything.</em></h2>
+      </div>
+      <p class="sec-head__aside" data-reveal>Whitefield's tech corridor, schools, hospitals and the metro, all within a short drive of your front door.</p>
+    </header>
+
+    <div class="loc__layout">
+      <div class="loc__panel">
+        <div class="chips chips--sm" role="group" aria-label="Filter nearby places" data-loc-filters>
+          <button class="chip is-active" type="button" data-cat="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-cat="transit" aria-pressed="false">Transit</button>
+          <button class="chip" type="button" data-cat="education" aria-pressed="false">Schools</button>
+          <button class="chip" type="button" data-cat="health" aria-pressed="false">Hospitals</button>
+          <button class="chip" type="button" data-cat="shopping" aria-pressed="false">Shopping</button>
+          <button class="chip" type="button" data-cat="business" aria-pressed="false">Business</button>
+          <button class="chip" type="button" data-cat="airport" aria-pressed="false">Airport</button>
+        </div>
+
+        <ul class="places" data-places>
+          <li class="place" data-cat="transit" data-lat="12.9954" data-lng="77.7581" data-name="Whitefield (Kadugodi) Metro Station"><button type="button" class="place__btn"><span class="place__min"><b>5</b> min</span><span class="place__name">Metro station</span><svg class="i" aria-hidden="true"><use href="#i-metro"/></svg></button></li>
+          <li class="place" data-cat="health" data-lat="12.9690" data-lng="77.7470" data-name="Multi-speciality hospital"><button type="button" class="place__btn"><span class="place__min"><b>8</b> min</span><span class="place__name">Multi-speciality hospital</span><svg class="i" aria-hidden="true"><use href="#i-hosp"/></svg></button></li>
+          <li class="place" data-cat="education" data-lat="12.9790" data-lng="77.7330" data-name="International school"><button type="button" class="place__btn"><span class="place__min"><b>10</b> min</span><span class="place__name">International school</span><svg class="i" aria-hidden="true"><use href="#i-school"/></svg></button></li>
+          <li class="place" data-cat="business" data-lat="12.9857" data-lng="77.7380" data-name="ITPL Tech Park"><button type="button" class="place__btn"><span class="place__min"><b>12</b> min</span><span class="place__name">ITPL business district</span><svg class="i" aria-hidden="true"><use href="#i-biz"/></svg></button></li>
+          <li class="place" data-cat="shopping" data-lat="12.9964" data-lng="77.6970" data-name="Phoenix Marketcity"><button type="button" class="place__btn"><span class="place__min"><b>15</b> min</span><span class="place__name">Premium retail &amp; dining</span><svg class="i" aria-hidden="true"><use href="#i-bag"/></svg></button></li>
+          <li class="place" data-cat="airport" data-lat="13.1986" data-lng="77.7066" data-name="Kempegowda International Airport"><button type="button" class="place__btn"><span class="place__min"><b>50</b> min</span><span class="place__name">International airport</span><svg class="i" aria-hidden="true"><use href="#i-plane"/></svg></button></li>
+        </ul>
+
+        <div class="loc__addr">
+          <svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>
+          <address>{{site.address}}</address>
+          <a class="link-line" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=12.9716,77.7510"><span>Get directions</span><svg class="i" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+        </div>
+      </div>
+
+      <div class="loc__map-wrap is-locked" data-map-wrap>
+        <!-- illustrative base map: always visible, so the area is never empty while the live map loads -->
+        <svg class="loc__sketch" viewBox="0 0 800 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="800" height="640" fill="#eaf3fc"/>
+          <path d="M-20 470 C140 430 230 520 380 470 S640 400 820 450" fill="none" stroke="#cfe3f8" stroke-width="46"/>
+          <path d="M-20 120 L820 220" stroke="#fff" stroke-width="16"/><path d="M120 -20 L220 660" stroke="#fff" stroke-width="12"/>
+          <path d="M-20 330 L820 300" stroke="#fff" stroke-width="22"/><path d="M520 -20 L600 660" stroke="#fff" stroke-width="14"/>
+          <path d="M-20 560 L820 520" stroke="#fff" stroke-width="10"/><path d="M360 -20 L330 660" stroke="#f6fafe" stroke-width="9"/>
+          <circle cx="410" cy="300" r="56" fill="#2f7df6" fill-opacity=".12"/><circle cx="410" cy="300" r="11" fill="#2f7df6" stroke="#fff" stroke-width="4"/>
+          <g fill="#8fb5e6"><circle cx="560" cy="170" r="7"/><circle cx="230" cy="200" r="7"/><circle cx="640" cy="420" r="7"/><circle cx="170" cy="440" r="7"/></g>
+        </svg>
+        <iframe class="loc__frame" data-map-frame title="Map of Azure Residences, Whitefield, Bengaluru" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=12.9716,77.7510&amp;z=14&amp;output=embed"></iframe>
+        <button class="loc__unlock" type="button" data-map-unlock><span>Click to interact with the map</span></button>
+        <p class="loc__label" data-map-label><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><span data-map-label-text>Azure Residences</span></p>
+      </div>
+    </div>
+  </div>
+</section>

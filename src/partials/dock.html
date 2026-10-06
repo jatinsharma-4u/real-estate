@@ -1,0 +1,14 @@
+<!-- Mobile persistent action bar -->
+<nav class="dock" aria-label="Quick actions" data-dock>
+  <a class="dock__btn" href="https://wa.me/{{site.whatsapp}}?text=Hi%2C%20I%27m%20interested%20in%20learning%20more%20about%20this%20property.%20Please%20share%20pricing%20and%20availability." target="_blank" rel="noopener" data-wa-link><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+  <a class="dock__btn" href="tel:{{site.phone_tel}}"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span>Call</span></a>
+  <button class="dock__btn dock__btn--main" type="button" data-open-lead="Enquire Now"><svg class="i" aria-hidden="true"><use href="#i-arrow-ur"/></svg><span>Enquire</span></button>
+</nav>
+
+<!-- Desktop floating CTA, appears after the hero -->
+<div class="float" data-float aria-hidden="true">
+  <a class="float__wa" href="https://wa.me/{{site.whatsapp}}?text=Hi%2C%20I%27m%20interested%20in%20learning%20more%20about%20this%20property.%20Please%20share%20pricing%20and%20availability." target="_blank" rel="noopener" aria-label="Chat on WhatsApp" tabindex="-1" data-wa-link><svg class="i"><use href="#i-wa"/></svg></a>
+  <button class="btn btn--blue float__cta" type="button" data-open-lead="Schedule a Visit" tabindex="-1"><span class="btn__label">Schedule a Visit</span><span class="btn__icon"><svg class="i"><use href="#i-arrow-ur"/></svg></span></button>
+</div>
+
+<div class="cursor" data-cursor-el aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"><span class="cursor__label" data-cursor-label></span></span></div>

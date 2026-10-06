@@ -1,0 +1,11 @@
+<!doctype html>
+<meta charset="utf-8"><title>Device harness</title>
+<style>html,body{margin:0;overflow:hidden;background:#222;height:100%}body{display:block;padding:0}
+iframe{border:0;background:#fff;transform-origin:top left}</style>
+<iframe id="f"></iframe>
+<script>
+const q=new URLSearchParams(location.search);
+const w=+q.get('w')||375,h=+q.get('h')||812,s=+q.get('s')||Math.min(1,(innerWidth-4)/(+q.get('w')||375)),p=q.get('p')||'/';
+const f=document.getElementById('f');f.width=w;f.height=h;f.style.transform=`scale(${s})`;f.style.marginBottom=(h*s-h)+'px';
+f.src=p+(q.get('qs')||'');
+</script>

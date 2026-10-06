@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /tools/
+Sitemap: https://www.azureresidences.in/sitemap.xml

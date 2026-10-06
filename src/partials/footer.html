@@ -1,0 +1,56 @@
+<footer class="foot" aria-label="Site footer">
+  <div class="container foot__top">
+    <div class="foot__brand">
+      <a class="nav__logo foot__logo" href="index.html" aria-label="Azure Residences, home">
+        <svg class="nav__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 28 16 4l12 24h-5.5L16 15.2 9.5 28z" fill="currentColor"/></svg>
+        <span class="nav__brand">Azure</span>
+      </a>
+      <p class="foot__about">Premium 2, 3 &amp; 4 BHK residences in Whitefield, Bengaluru, by {{site.developer}}. Light-filled homes, resort amenities and an address worth coming home to.</p>
+      <ul class="foot__social" aria-label="Social media">
+        <li><a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="i"><use href="#i-ig"/></svg></a></li>
+        <li><a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="i"><use href="#i-in"/></svg></a></li>
+        <li><a href="https://youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg class="i"><use href="#i-yt"/></svg></a></li>
+        <li><a href="https://x.com/" target="_blank" rel="noopener" aria-label="X"><svg class="i"><use href="#i-xx"/></svg></a></li>
+      </ul>
+    </div>
+
+    <nav class="foot__col" aria-label="Explore">
+      <h2 class="foot__h">Explore</h2>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="amenities.html">Amenities</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="foot__col" aria-label="Properties">
+      <h2 class="foot__h">Properties</h2>
+      <ul>
+        <li><a href="properties.html?plan=2#plans">2 BHK · The Courtyard</a></li>
+        <li><a href="properties.html?plan=3#plans">3 BHK · The Skyline</a></li>
+        <li><a href="properties.html?plan=4#plans">4 BHK · Terrace Penthouse</a></li>
+        <li><a href="properties.html#plans">Floor plans</a></li>
+      </ul>
+    </nav>
+    <div class="foot__col">
+      <h2 class="foot__h">Contact</h2>
+      <ul>
+        <li><a href="tel:{{site.phone_tel}}">{{site.phone}}</a></li>
+        <li><a href="mailto:{{site.email}}">{{site.email}}</a></li>
+        <li><address>{{site.address}}</address></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="foot__word" aria-hidden="true"><span>Azure</span></div>
+
+  <div class="container foot__bottom">
+    <p class="foot__legal">© {{site.year}} {{site.developer}}. All rights reserved.</p>
+    <ul class="foot__links">
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms &amp; Conditions</a></li>
+    </ul>
+    <p class="foot__rera"><b>RERA:</b> {{site.rera}}. Visit the Karnataka RERA website for project details. Images are artistic impressions; specifications, plans and prices are indicative and subject to change.</p>
+  </div>
+</footer>

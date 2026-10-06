@@ -1,0 +1,102 @@
+<template id="lead-form-tpl">
+  <div class="leadform" data-leadform>
+    <ol class="steps" aria-hidden="true" data-steps-bar>
+      <li class="is-on"><b>1</b><span>Your details</span></li>
+      <li><b>2</b><span>Preferences</span></li>
+    </ol>
+
+    <form class="form" method="post" action="#" novalidate data-lead-form>
+      <div class="form__summary" role="alert" tabindex="-1" hidden data-summary>
+        <p><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg> Please fix the following:</p>
+        <ul></ul>
+      </div>
+
+      <div class="form__step" data-step="1">
+        <div class="form__grid">
+          <div class="field">
+            <label for="__ID__-name">Full name <span class="req" aria-hidden="true">*</span></label>
+            <input id="__ID__-name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80" placeholder="Your full name" aria-describedby="__ID__-name-e">
+            <p class="field__err" id="__ID__-name-e" hidden></p>
+          </div>
+          <div class="field">
+            <label for="__ID__-phone">Phone number <span class="req" aria-hidden="true">*</span></label>
+            <input id="__ID__-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+91 98765 43210" aria-describedby="__ID__-phone-e">
+            <p class="field__err" id="__ID__-phone-e" hidden></p>
+          </div>
+          <div class="field field--full">
+            <label for="__ID__-email">Email address <span class="req" aria-hidden="true">*</span></label>
+            <input id="__ID__-email" name="email" type="email" inputmode="email" autocomplete="email" required maxlength="120" placeholder="you@example.com" aria-describedby="__ID__-email-e">
+            <p class="field__err" id="__ID__-email-e" hidden></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form__step" data-step="2">
+        <div class="form__grid">
+          <fieldset class="field field--full pills" role="radiogroup">
+            <legend>Preferred property type</legend>
+            <div class="pills__row">
+              <label class="pill"><input type="radio" name="propertyType" value="2 BHK"><span>2 BHK</span></label>
+              <label class="pill"><input type="radio" name="propertyType" value="3 BHK"><span>3 BHK</span></label>
+              <label class="pill"><input type="radio" name="propertyType" value="4 BHK"><span>4 BHK</span></label>
+              <label class="pill"><input type="radio" name="propertyType" value="" checked><span>Not sure</span></label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="__ID__-budget">Budget</label>
+            <div class="select">
+              <select id="__ID__-budget" name="budget">
+                <option value="">Select a range</option>
+                <option>₹2.5 – 3.5 Cr</option>
+                <option>₹3.5 – 5 Cr</option>
+                <option>₹5 – 7 Cr</option>
+                <option>₹7 Cr +</option>
+              </select>
+              <svg class="i" aria-hidden="true"><use href="#i-arrow-d"/></svg>
+            </div>
+          </div>
+          <div class="field">
+            <label for="__ID__-date">Preferred visit date</label>
+            <input id="__ID__-date" name="visitDate" type="date" data-min-today autocomplete="off" aria-describedby="__ID__-date-e">
+            <p class="field__err" id="__ID__-date-e" hidden></p>
+          </div>
+          <div class="field field--full">
+            <label for="__ID__-msg">Message <span class="opt">optional</span></label>
+            <textarea id="__ID__-msg" name="message" rows="2" maxlength="600" placeholder="Anything we should know?"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- anti-spam: honeypot (hidden from people), timing token, source -->
+      <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label></div>
+      <input type="hidden" name="source" value="" data-source>
+      <input type="hidden" name="ts" value="" data-ts>
+
+      <div class="form__error" role="alert" hidden data-form-error>
+        <svg class="i" aria-hidden="true"><use href="#i-alert"/></svg>
+        <div><p data-error-title>We couldn't send your enquiry.</p><p class="form__error-s" data-error-msg>Please check your connection and try again, or reach us directly on WhatsApp.</p></div>
+      </div>
+
+      <div class="form__actions">
+        <button class="btn btn--ghost btn--lg" type="button" data-step-back hidden><svg class="i" aria-hidden="true"><use href="#i-arrow-l"/></svg><span>Back</span></button>
+        <button class="btn btn--blue btn--lg" type="button" data-step-next hidden><span class="btn__label">Continue</span><span class="btn__icon"><svg class="i"><use href="#i-arrow-r"/></svg></span></button>
+        <button class="btn btn--blue btn--lg form__submit" type="submit" data-submit>
+          <span class="btn__label" data-submit-label>Request a Callback</span>
+          <span class="btn__icon"><svg class="i"><use href="#i-arrow-ur"/></svg></span>
+          <span class="btn__spinner" aria-hidden="true"></span>
+        </button>
+      </div>
+      <p class="form__note"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg><span>Private and never shared. By submitting you agree to our <a href="privacy.html">Privacy Policy</a>.</span></p>
+    </form>
+
+    <div class="form__success" hidden tabindex="-1" data-success>
+      <span class="form__tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>
+      <h3 class="form__thanks">Thank You!</h3>
+      <p>Your enquiry has been received. Our property advisor will contact you shortly.</p>
+      <div class="form__success-cta">
+        <a class="btn btn--line btn--sm" href="#" target="_blank" rel="noopener" data-wa-link><span class="btn__label">Chat on WhatsApp</span><span class="btn__icon"><svg class="i"><use href="#i-wa"/></svg></span></a>
+        <button class="link-line" type="button" data-form-reset><span>Send another enquiry</span></button>
+      </div>
+    </div>
+  </div>
+</template>

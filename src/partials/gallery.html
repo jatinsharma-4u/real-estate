@@ -1,0 +1,48 @@
+<section class="gal section" id="gallery" aria-labelledby="gal-title" data-gallery>
+  <div class="container">
+    
+    <div class="gal__bar"><div class="chips" role="group" aria-label="Filter gallery" data-gal-filters>
+      <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-filter="exterior" aria-pressed="false">Exterior</button>
+      <button class="chip" type="button" data-filter="interior" aria-pressed="false">Interior</button>
+      <button class="chip" type="button" data-filter="living" aria-pressed="false">Living Room</button>
+      <button class="chip" type="button" data-filter="bedroom" aria-pressed="false">Bedroom</button>
+      <button class="chip" type="button" data-filter="kitchen" aria-pressed="false">Kitchen</button>
+      <button class="chip" type="button" data-filter="amenities" aria-pressed="false">Amenities</button>
+      <button class="chip" type="button" data-filter="location" aria-pressed="false">Location</button>
+    </div><p class="gal__count" aria-hidden="true"><b data-gal-num>22</b> images</p></div>
+    <p class="sr-only" role="status" aria-live="polite" data-gal-status></p>
+
+    <ul class="gal__grid" data-gal-grid>
+      <li class="gal__item" data-cat="exterior"><button class="gal__btn" type="button" data-lb data-caption="Pool terrace and white volumes">{{pic n="ext-white-pool" sizes="(min-width:1024px) 50vw, 100vw" alt="White modern villa with a turquoise pool and glass balustrades" cls="gal__pic"}}<span class="gal__over"><span class="gal__t">Pool terrace</span></span></button></li>
+      <li class="gal__item" data-cat="exterior"><button class="gal__btn" type="button" data-lb data-caption="Cube villa with infinity pool">{{pic n="ext-pool" sizes="(min-width:1024px) 25vw, 50vw" alt="Cube-form villa with an infinity pool" cls="gal__pic"}}<span class="gal__over"><span class="gal__t">Infinity pool</span></span></button></li>
+      <li class="gal__item" data-cat="bedroom interior"><button class="gal__btn" type="button" data-lb data-caption="Primary suite">{{pic n="bed1" sizes="(min-width:1024px) 25vw, 50vw" alt="Primary suite with a tufted headboard and city view" cls="gal__pic" pos="50% 60%"}}<span class="gal__over"><span class="gal__t">Primary suite</span></span></button></li>
+      <li class="gal__item" data-cat="living interior"><button class="gal__btn" type="button" data-lb data-caption="Double-height living room">{{pic n="int-living2" sizes="(min-width:1024px) 25vw, 50vw" alt="Double-height living room with a floating staircase" cls="gal__pic"}}<span class="gal__over"><span class="gal__t">Living room</span></span></button></li>
+      <li class="gal__item" data-cat="exterior"><button class="gal__btn" type="button" data-lb data-caption="Terracotta facade and pool terrace">{{pic n="ext-terracotta" sizes="(min-width:1024px) 25vw, 50vw" alt="Terracotta and white residence with a pool" cls="gal__pic"}}<span class="gal__over"><span class="gal__t">Terrace facade</span></span></button></li>
+      <li class="gal__item" data-cat="kitchen interior"><button class="gal__btn" type="button" data-lb data-caption="Kitchen with oak joinery">{{pic n="kit2" sizes="(min-width:1024px) 25vw, 50vw" alt="Kitchen with oak joinery and pendant lights" cls="gal__pic" pos="50% 50%"}}<span class="gal__over"><span class="gal__t">Kitchen</span></span></button></li>
+      <li class="gal__item" data-cat="amenities"><button class="gal__btn" type="button" data-lb data-caption="Clubhouse and reflecting pool at dusk">{{pic n="club-eve" sizes="(min-width:1024px) 50vw, 100vw" alt="Clubhouse and reflecting pool glowing at dusk" cls="gal__pic"}}<span class="gal__over"><span class="gal__t">Clubhouse</span></span></button></li>
+      <li class="gal__item" data-cat="bedroom interior"><button class="gal__btn" type="button" data-lb data-caption="Guest bedroom">{{pic n="bed2" sizes="(min-width:1024px) 25vw, 50vw" alt="Bright guest bedroom with grey linen" cls="gal__pic"}}<span class="gal__over"><span class="gal__t">Guest bedroom</span></span></button></li>
+      <li class="gal__item" data-cat="living interior"><button class="gal__btn" type="button" data-lb data-caption="Living room with long window">{{pic n="int-living3" sizes="(min-width:1024px) 25vw, 50vw" alt="Living room with a long clerestory window" cls="gal__pic"}}<span class="gal__over"><span class="gal__t">Living lounge</span></span></button></li>
+      <li class="gal__item" data-cat="exterior"><button class="gal__btn" type="button" data-lb data-caption="The residence at dusk">{{pic n="ext-dusk-tree" sizes="(min-width:1024px) 50vw, 100vw" alt="Family home glowing at dusk beneath a mature tree" cls="gal__pic"}}<span class="gal__over"><span class="gal__t">At dusk</span></span></button></li>
+      <li class="gal__item" data-cat="amenities"><button class="gal__btn" type="button" data-lb data-caption="Air-conditioned gymnasium">{{pic n="gym" sizes="(min-width:1024px) 25vw, 50vw" alt="Gymnasium with racks of free weights" cls="gal__pic"}}<span class="gal__over"><span class="gal__t">Gymnasium</span></span></button></li>
+      <li class="gal__item" data-cat="kitchen interior"><button class="gal__btn" type="button" data-lb data-caption="Open kitchen with marble island">{{pic n="kit1" sizes="(min-width:1024px) 25vw, 50vw" alt="Open kitchen with a marble island and bar stools" cls="gal__pic"}}<span class="gal__over"><span class="gal__t">Open kitchen</span></span></button></li>
+      <li class="gal__item" data-cat="amenities exterior"><button class="gal__btn" type="button" data-lb data-caption="Sunset over the sky deck">{{pic n="sunset-pool" sizes="(min-width:1024px) 25vw, 50vw" alt="Sunset sky over a plunge pool on a private terrace" cls="gal__pic" pos="50% 50%"}}<span class="gal__over"><span class="gal__t">Sky deck</span></span></button></li>
+      <li class="gal__item" data-cat="living interior"><button class="gal__btn" type="button" data-lb data-caption="Living room opening to the pool deck">{{pic n="pool-view" sizes="(min-width:1024px) 25vw, 50vw" alt="Living room opening onto a private pool deck" cls="gal__pic"}}<span class="gal__over"><span class="gal__t">Deck living</span></span></button></li>
+      <li class="gal__item" data-cat="bedroom interior"><button class="gal__btn" type="button" data-lb data-caption="Suite with timber bench">{{pic n="bed3" sizes="(min-width:1024px) 25vw, 50vw" alt="Bedroom with an art-led wall and layered bedding" cls="gal__pic"}}<span class="gal__over"><span class="gal__t">Suite</span></span></button></li>
+      <li class="gal__item" data-cat="amenities"><button class="gal__btn" type="button" data-lb data-caption="Wellness and yoga deck">{{pic n="yoga" sizes="(min-width:1024px) 25vw, 50vw" alt="Resident exercising on a sunlit studio floor" cls="gal__pic" pos="50% 60%"}}<span class="gal__over"><span class="gal__t">Wellness deck</span></span></button></li>
+      <li class="gal__item" data-cat="amenities exterior"><button class="gal__btn" type="button" data-lb data-caption="Terrace pool with sun loungers">{{pic n="pool-garden" sizes="(min-width:1024px) 50vw, 100vw" alt="Terrace pool with glass facade and sun loungers" cls="gal__pic"}}<span class="gal__over"><span class="gal__t">Terrace pool</span></span></button></li>
+      <li class="gal__item" data-cat="interior"><button class="gal__btn" type="button" data-lb data-caption="Spa-style bathroom">{{pic n="bath1" sizes="(min-width:1024px) 25vw, 50vw" alt="Spa-style bathroom with a freestanding tub" cls="gal__pic" pos="50% 60%"}}<span class="gal__over"><span class="gal__t">Spa bath</span></span></button></li>
+      <li class="gal__item" data-cat="exterior"><button class="gal__btn" type="button" data-lb data-caption="Timber and stone facade">{{pic n="ext-timber" sizes="(min-width:1024px) 25vw, 50vw" alt="Timber and stone facade with a glazed entrance" cls="gal__pic"}}<span class="gal__over"><span class="gal__t">Timber facade</span></span></button></li>
+      <li class="gal__item" data-cat="bedroom interior"><button class="gal__btn" type="button" data-lb data-caption="Bright bedroom">{{pic n="bed4" sizes="(min-width:1024px) 25vw, 50vw" alt="Bedroom with warm lighting and a padded headboard" cls="gal__pic"}}<span class="gal__over"><span class="gal__t">Bedroom</span></span></button></li>
+      <li class="gal__item" data-cat="location"><button class="gal__btn" type="button" data-lb data-caption="The city at golden hour">{{pic n="city" sizes="(min-width:1024px) 50vw, 100vw" alt="City skyline lit by low golden sunlight" cls="gal__pic"}}<span class="gal__over"><span class="gal__t">City, close by</span></span></button></li>
+      <li class="gal__item" data-cat="location"><button class="gal__btn" type="button" data-lb data-caption="Skyline views">{{pic n="city2" sizes="(min-width:1024px) 25vw, 50vw" alt="Wide skyline view at sunset" cls="gal__pic"}}<span class="gal__over"><span class="gal__t">Skyline</span></span></button></li>
+    </ul>
+
+    <div class="empty" hidden data-gal-empty>
+      <svg class="i i--lg" aria-hidden="true"><use href="#i-alert"/></svg>
+      <p class="empty__t">No images in this category yet.</p>
+      <p class="empty__s">New photography is added as the project progresses.</p>
+      <button class="btn btn--line btn--sm" type="button" data-filter="all"><span class="btn__label">Show all images</span></button>
+    </div>
+  </div>
+</section>

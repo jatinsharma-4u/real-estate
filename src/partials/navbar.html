@@ -1,0 +1,57 @@
+<header class="nav" data-nav>
+  <div class="nav__bar">
+    <a class="nav__logo" href="index.html" aria-label="Azure Residences, home">
+      <svg class="nav__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 28 16 4l12 24h-5.5L16 15.2 9.5 28z" fill="currentColor"/></svg>
+      <span class="nav__brand">Azure</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="properties.html" data-nav-page="properties"><span>Properties</span></a>
+      <a href="about.html" data-nav-page="about"><span>About</span></a>
+      <a href="amenities.html" data-nav-page="amenities"><span>Amenities</span></a>
+      <a href="gallery.html" data-nav-page="gallery"><span>Gallery</span></a>
+      <a href="location.html" data-nav-page="location"><span>Location</span></a>
+      <a href="contact.html" data-nav-page="contact"><span>Contact</span></a>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="nav__enquire" type="button" data-open-lead="Enquire Now">Enquire Now</button>
+      <button class="btn btn--blue btn--sm nav__visit" type="button" data-open-lead="Schedule a Visit" data-magnetic>
+        <span class="btn__label">Schedule a Visit</span><span class="btn__icon"><svg class="i"><use href="#i-arrow-ur"/></svg></span>
+      </button>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>
+        <span class="nav__toggle-label" data-menu-label>Menu</span>
+        <span class="nav__toggle-icon" aria-hidden="true"><i></i><i></i></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav__progress" aria-hidden="true"><i data-progress></i></div>
+</header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Site menu" inert data-menu>
+  <div class="menu__bg" data-menu-bg></div>
+  <div class="menu__inner">
+    <nav class="menu__nav" aria-label="Mobile">
+      <ol class="menu__list">
+        <li><a href="index.html" data-menu-link data-nav-page="home"><span class="menu__idx">01</span><span class="menu__txt">Home</span></a></li>
+        <li><a href="properties.html" data-menu-link data-nav-page="properties"><span class="menu__idx">02</span><span class="menu__txt">Properties</span></a></li>
+        <li><a href="about.html" data-menu-link data-nav-page="about"><span class="menu__idx">03</span><span class="menu__txt">About</span></a></li>
+        <li><a href="amenities.html" data-menu-link data-nav-page="amenities"><span class="menu__idx">04</span><span class="menu__txt">Amenities</span></a></li>
+        <li><a href="gallery.html" data-menu-link data-nav-page="gallery"><span class="menu__idx">05</span><span class="menu__txt">Gallery</span></a></li>
+        <li><a href="location.html" data-menu-link data-nav-page="location"><span class="menu__idx">06</span><span class="menu__txt">Location</span></a></li>
+        <li><a href="contact.html" data-menu-link data-nav-page="contact"><span class="menu__idx">07</span><span class="menu__txt">Contact</span></a></li>
+      </ol>
+    </nav>
+    <div class="menu__side">
+      <div class="menu__preview" aria-hidden="true">
+        {{pic n="ext-white-pool" sizes="(min-width:768px) 40vw, 80vw" cls="menu__pic" alt=""}}
+      </div>
+      <div class="menu__foot">
+        <button class="btn btn--blue btn--block" type="button" data-open-lead="Schedule a Visit" data-menu-cta>
+          <span class="btn__label">Schedule a Visit</span><span class="btn__icon"><svg class="i"><use href="#i-arrow-ur"/></svg></span>
+        </button>
+        <p class="menu__contact"><a href="tel:{{site.phone_tel}}">{{site.phone}}</a><a href="mailto:{{site.email}}">{{site.email}}</a></p>
+      </div>
+    </div>
+  </div>
+</div>

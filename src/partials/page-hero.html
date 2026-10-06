@@ -1,0 +1,13 @@
+<section class="phero" aria-labelledby="phero-title" data-page-hero>
+  <div class="phero__media" data-phero-media>
+    {{pic n="{{@img}}" sizes="100vw" cls="phero__pic" load="eager" prio="1" alt="{{@alt}}" pos="{{@pos}}"}}
+  </div>
+  <div class="phero__shade" aria-hidden="true"></div>
+  <div class="phero__inner">
+    <nav class="crumbs" aria-label="Breadcrumb" data-phero-fade>
+      <a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">{{@crumb}}</span>
+    </nav>
+    <h1 class="phero__title" id="phero-title" data-phero-title>{{@title}}</h1>
+    <p class="phero__lead" data-phero-fade>{{@lead}}</p>
+  </div>
+</section>

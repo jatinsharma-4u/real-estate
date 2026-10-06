@@ -1,0 +1,181 @@
+/* ==========================================================================
+   AZURE RESIDENCES — animations.css
+   Hover micro-interactions · state transitions · keyframes · reduced-motion · failsafe.
+   (Scroll choreography lives in js/animations.js — transform/opacity/clip-path only.)
+   ========================================================================== */
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes scrollcue { 0% { transform: translateY(-100%); } 55%, 100% { transform: translateY(100%); } }
+@keyframes uline { 0% { background-size: 100% 1px; background-position: 100% 100%; } 49% { background-size: 0 1px; background-position: 100% 100%; } 50% { background-size: 0 1px; background-position: 0 100%; } 100% { background-size: 100% 1px; background-position: 0 100%; } }
+@keyframes tick { from { stroke-dashoffset: 30; } to { stroke-dashoffset: 0; } }
+@keyframes pop { 0% { transform: scale(.6); opacity: 0; } 70% { transform: scale(1.06); opacity: 1; } 100% { transform: scale(1); } }
+
+/* ---------- buttons ---------- */
+.btn { transition: color .45s var(--ease-out), border-color .45s var(--ease-out), transform .35s var(--ease-out); }
+.btn::before { transition: transform .65s var(--ease-out); }
+.btn__icon, .btn__label { transition: transform .5s var(--ease-out), background-color .4s; }
+.btn__icon .i { transition: transform .6s var(--ease-out); }
+.btn--blue { --fg-h: #fff; }
+.btn--light { --fg-h: var(--ink); }
+.btn--glass { --fg-h: var(--ink); }
+.btn--line { --fg-h: #fff; }
+.type .btn--line { --fg-h: var(--ink); }
+@media (hover: hover) {
+  .btn:hover { color: var(--fg-h, var(--fg)); }
+  .btn:hover::before { transform: translateY(0); }
+  .btn:hover .btn__label { transform: translateX(-3px); }
+  .btn:hover .btn__icon .i:first-child { transform: translate(130%, -130%); }
+  .btn:hover .btn__icon .i + .i { transform: translate(0, 0); }
+  .btn--light:hover .btn__icon { background: var(--ink); }
+  .btn--glass:hover .btn__icon { background: var(--ink); color: #fff; }
+}
+.btn:active { transform: scale(.97); }
+.btn.is-loading { pointer-events: none; }
+
+.link-line:hover { animation: uline .75s var(--ease-io); }
+.link-line .i { transition: transform .5s var(--ease-out); }
+.link-line:hover .i { transform: translate(3px, -3px); }
+
+/* ---------- navigation ---------- */
+.nav__links a::after { transition: transform .55s var(--ease-out); }
+.nav__links a:hover::after { transform: scaleX(1); transform-origin: left; }
+.nav__enquire::after { transition: transform .55s var(--ease-out); }
+.nav__enquire:hover::after { transform: scaleX(1); transform-origin: left; }
+.nav__bar { transition: background-color .5s var(--ease-soft), box-shadow .5s var(--ease-soft), border-color .5s var(--ease-soft), color .4s; }
+.nav__toggle { transition: background-color .4s, border-color .4s, color .4s; }
+.nav__toggle-icon i { transition: transform .55s var(--ease-out), top .55s var(--ease-out), bottom .55s var(--ease-out); }
+.nav__toggle[aria-expanded="true"] .nav__toggle-icon i:first-child { top: 3.25px; transform: rotate(45deg); }
+.nav__toggle[aria-expanded="true"] .nav__toggle-icon i:last-child { bottom: 3.25px; transform: rotate(-45deg); }
+.menu__list a { transition: transform .6s var(--ease-out), color .4s; }
+@media (hover: hover) {
+  .menu__list a:hover { transform: translateX(14px); color: var(--sky-2); }
+}
+
+/* ---------- hero ---------- */
+.hero__card-link .i { transition: transform .5s var(--ease-out); }
+.hero__card-link:hover .i { transform: translate(3px, -3px); }
+
+/* ---------- images: hover zoom (on the <picture>, so GSAP transforms on <img> never collide) ---------- */
+.frame__pic, .panel__pic, .gal__pic, .type__pic, .stats__pic { transition: transform 1.4s var(--ease-out); will-change: auto; }
+@media (hover: hover) {
+  .frame:hover .frame__pic { transform: scale(1.035); }
+  .panel__fig:hover .panel__pic { transform: scale(1.045); }
+  .type:hover .type__pic { transform: scale(1.07); }
+}
+.panel__title, .panel__num { transition: transform .7s var(--ease-out), color .4s; }
+@media (hover: hover) {
+  .panel__fig:hover .panel__title { transform: translateX(8px); }
+  .panel__fig:hover .panel__num { color: var(--ink); }
+}
+
+/* types */
+.type__body { transition: transform .8s var(--ease-out); }
+.type::after { transition: opacity .6s; }
+@media (hover: hover) and (min-width: 1024px) {
+  .type__body { transform: translateY(0); }
+  .type:not(:hover):not(:focus-within) .type__specs { opacity: .86; }
+}
+
+/* amenities: wipe + settle */
+.amen__slide.is-active { transition: clip-path 1.05s var(--ease-io); }
+.amen__slide .amen__pic img { transform: scale(1.16); }
+.amen__slide.is-active .amen__pic img { transform: scale(1); transition: transform 1.9s var(--ease-out); }
+.amen__slide.is-prev .amen__pic img { transform: scale(1); }
+.amen__slide figcaption, .amen__panel > * { transition: opacity .6s .35s var(--ease-out), transform .8s .35s var(--ease-out); }
+.amen__slide:not(.is-active) figcaption { opacity: 0; transform: translateY(12px); }
+.amen__item { transition: color .45s var(--ease-out), padding-left .55s var(--ease-out); }
+.amen__item .i { transition: transform .55s var(--ease-out), opacity .4s, color .4s; }
+.amen__n { transition: color .4s; }
+@media (hover: hover) {
+  .amen__item:hover { color: #fff; padding-left: 14px; }
+  .amen__item:hover .i { opacity: 1; transform: translateX(-4px) scale(1.08); }
+}
+.amen__item.is-active { padding-left: 14px; }
+
+/* gallery */
+.gal__pic img { transition: transform 1.4s var(--ease-out); }
+.gal__over { transition: background .6s var(--ease-out); }
+.gal__t { transition: transform .7s var(--ease-out); }
+.gal__ic { transition: transform .6s var(--ease-out), opacity .4s, background-color .4s, color .4s; }
+@media (hover: hover) {
+  .gal__btn .gal__t { transform: translateY(10px); }
+  .gal__btn .gal__ic { opacity: 0; transform: scale(.6) rotate(-90deg); }
+  .gal__btn:hover .gal__pic img, .gal__btn:focus-visible .gal__pic img { transform: scale(1.08); }
+  .gal__btn:hover .gal__t, .gal__btn:focus-visible .gal__t { transform: translateY(0); }
+  .gal__btn:hover .gal__ic, .gal__btn:focus-visible .gal__ic { opacity: 1; transform: none; }
+  .gal__btn:hover .gal__over { background: linear-gradient(to top, rgba(7, 22, 51, .78), rgba(7, 22, 51, .12) 62%); }
+  .gal__btn:hover .gal__ic { background: var(--blue); color: #fff; }
+}
+.chip { transition: background-color .35s, border-color .35s, color .35s, transform .3s var(--ease-out); }
+@media (hover: hover) { .chip:not(.is-active):hover { border-color: var(--ink); } }
+.chip:active { transform: scale(.96); }
+
+/* plans, places, quotes */
+.tab { transition: color .4s; }
+.tabs__ink { transition: transform .7s var(--ease-out), width .7s var(--ease-out); }
+@media (hover: hover) { .tab:not(.is-active):hover { color: var(--ink); } }
+.place__btn { transition: background-color .4s, padding-left .5s var(--ease-out); }
+.place__btn .i { transition: transform .5s var(--ease-out), opacity .3s; }
+@media (hover: hover) {
+  .place__btn:hover { padding-left: 12px; background: linear-gradient(90deg, var(--sky-soft), transparent); }
+  .place__btn:hover .i { transform: scale(1.12); opacity: 1; }
+}
+.quote { transition: border-color .5s; }
+.quote:hover { border-top-color: var(--blue); }
+
+/* contact + footer links */
+.cta__contacts a, .foot__col a, .foot__links a { background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size .55s var(--ease-out), color .3s; }
+.cta__contacts a:hover, .foot__col a:hover, .foot__links a:hover { background-size: 100% 1px; }
+.foot__col a { background-position: 0 calc(100% - 4px); }
+.foot__social a { transition: background-color .4s, color .4s, transform .5s var(--ease-out), border-color .4s; }
+@media (hover: hover) { .foot__social a:hover { background: #fff; color: var(--ink); transform: translateY(-4px); border-color: #fff; } }
+.enq__direct-link { transition: background-color .4s, border-color .4s, transform .5s var(--ease-out); }
+@media (hover: hover) { .enq__direct-link:hover { background: #fff; border-color: var(--blue); transform: translateY(-2px); } }
+
+/* dock + floating cta */
+.dock { transition: transform .7s var(--ease-out), opacity .5s; }
+.dock.is-away { transform: translateY(140%); opacity: 0; }
+.dock__btn { transition: transform .3s var(--ease-out), background-color .3s; }
+.dock__btn:active { transform: scale(.94); background: rgba(255, 255, 255, .12); }
+.dock__btn--main:active { background: var(--blue-d); }
+.float { opacity: 0; transform: translateY(24px); pointer-events: none; transition: opacity .6s var(--ease-soft), transform .8s var(--ease-out); }
+.float.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.float__wa { transition: transform .5s var(--ease-out), background-color .3s; }
+@media (hover: hover) { .float__wa:hover { transform: scale(1.08) rotate(-6deg); } }
+
+/* cursor */
+.cursor__ring::before { transition: transform .5s var(--ease-out), opacity .3s; }
+.cursor__label { transition: opacity .3s; }
+.cursor__dot { transition: opacity .25s; }
+
+/* forms */
+.field input, .field select, .field textarea { transition: background-color .3s, border-color .3s, box-shadow .3s; }
+.field__err:not([hidden]) { animation: pop .4s var(--ease-out) both; }
+.form__tick { animation: pop .7s var(--ease-out) both; }
+.form__success:not([hidden]) .form__tick svg { animation: tick .7s .25s var(--ease-out) both; }
+.toast { will-change: transform, opacity; }
+
+/* image failure state */
+picture img { transition: opacity .6s var(--ease-soft); }
+
+/* ---------- failsafe: if the animation layer fails to boot, never leave content hidden ---------- */
+.anim-failsafe [data-reveal], .anim-failsafe [data-stagger] > *, .anim-failsafe [data-split],
+.anim-failsafe [data-img-reveal], .anim-failsafe [data-words], .anim-failsafe [data-hero-word],
+.anim-failsafe [data-hero-meta], .anim-failsafe [data-hero-tag], .anim-failsafe [data-hero-sub],
+.anim-failsafe [data-hero-cta], .anim-failsafe .life__line, .anim-failsafe [data-life-sub],
+.anim-failsafe [data-life-eyebrow], .anim-failsafe [data-life-notes] > *, .anim-failsafe .nav {
+  opacity: 1 !important; transform: none !important; clip-path: none !important; visibility: visible !important;
+}
+.anim-failsafe .loader { display: none !important; }
+.anim-failsafe .life__media { clip-path: none !important; }
+
+/* ---------- reduced motion: simplified, calm experience ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  .hero__scroll i::after { animation: none; transform: none; }
+  .cursor { display: none !important; }
+  .showcase__viewport { overflow-x: auto; }
+}
+html.reduced .hero__scroll i::after { animation: none; transform: none; }
+html.reduced .life__media { clip-path: none !important; }

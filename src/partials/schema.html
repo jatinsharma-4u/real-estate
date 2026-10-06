@@ -1,0 +1,25 @@
+<link rel="preload" as="image" type="image/avif" media="(min-width: 600px)" imagesrcset="assets/images/hero-sky-1280.avif 1280w, assets/images/hero-sky-1920.avif 1920w, assets/images/hero-sky-2400.avif 2400w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" type="image/avif" media="(max-width: 599px)" imagesrcset="assets/images/hero-m-sky-640.avif 640w, assets/images/hero-m-sky-900.avif 900w, assets/images/hero-m-sky-1200.avif 1200w" imagesizes="100vw" fetchpriority="high">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type": "Organization", "@id": "{{site.url}}/#developer", "name": "{{site.developer}}", "url": "{{site.url}}/", "telephone": "{{site.phone_tel}}", "email": "{{site.email}}"},
+    {
+      "@type": "ApartmentComplex", "@id": "{{site.url}}/#project", "name": "Azure Residences",
+      "description": "Premium 2, 3 and 4 BHK apartments with private terraces, a clubhouse and 15+ amenities in Whitefield, Bengaluru.",
+      "url": "{{site.url}}/", "image": "{{site.url}}/assets/images/og-image.jpg", "numberOfAccommodationUnits": 320,
+      "address": {"@type": "PostalAddress", "streetAddress": "Whitefield Main Road", "addressLocality": "Bengaluru", "addressRegion": "Karnataka", "postalCode": "560066", "addressCountry": "IN"},
+      "geo": {"@type": "GeoCoordinates", "latitude": 12.9716, "longitude": 77.7510}, "telephone": "{{site.phone_tel}}",
+      "amenityFeature": [
+        {"@type": "LocationFeatureSpecification", "name": "Swimming pool", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Clubhouse", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Gymnasium", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "24/7 security and CCTV", "value": true}
+      ]
+    },
+    {"@type": "RealEstateListing", "name": "Azure Residences, 2, 3 & 4 BHK in Whitefield, Bengaluru", "url": "{{site.url}}/", "about": {"@id": "{{site.url}}/#project"},
+     "offers": {"@type": "Offer", "priceCurrency": "INR", "price": "28500000", "availability": "https://schema.org/PreOrder"}}
+  ]
+}
+</script>
