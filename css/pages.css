@@ -713,3 +713,43 @@ main > section { border-radius: 0; }
 @media (max-width: 767.98px) { .hero-wrap + .brandband { height: calc(29vw * .8 + 14vw + 6vw); } }
 /* the big wordmark band is a desktop/tablet moment only */
 @media (max-width: 767.98px) { .brandband { display: none !important; } }
+
+/* ==========================================================================
+   v15 — footer: clean alignment, nothing overlaps (the logo used to inherit height:100% from the nav)
+   ========================================================================== */
+.foot__logo { height: auto; padding: 0; width: fit-content; }
+.foot__brand { display: grid; gap: 16px; align-content: start; }
+.foot__about { margin: 0; max-width: 42ch; font-size: .9375rem; line-height: 1.6; }
+.foot__social { margin: 4px 0 0; gap: 10px; }
+.foot__social a { width: 44px; height: 44px; }
+.foot__h { margin: 0 0 14px; }
+.foot__col ul { gap: 2px; }
+.foot__col a, .foot__col address { padding: 6px 0; font-size: .9375rem; line-height: 1.45; }
+.foot__bottom { align-items: start; }
+.foot__legal { margin: 0; }
+.foot__links { margin: 0; }
+@media (max-width: 767.98px) {
+  .foot__top { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 22px; padding-block: 44px 20px; }
+  .foot__brand { grid-column: 1 / -1; padding-bottom: 26px; border-bottom: 1px solid var(--line); }
+  .foot__col:last-child { grid-column: 1 / -1; padding-top: 24px; border-top: 1px solid var(--line); }
+  .foot__col:last-child ul { gap: 4px; }
+  .foot__word { margin-top: 6px; }
+  .foot__bottom { grid-template-columns: 1fr; gap: 12px; padding-block: 20px 28px; }
+  .foot__links { gap: 22px; }
+  .foot { padding-bottom: calc(96px + env(safe-area-inset-bottom)); }
+}
+
+/* v16 — compact "Choose your plan" cards on phones */
+@media (max-width: 767.98px) {
+  .types__grid { gap: 14px; }
+  .type { min-height: 0; aspect-ratio: auto; padding-top: clamp(150px, 46vw, 220px); }
+  .type__body { padding: 18px 18px 18px; }
+  .type__name { font-size: 1.65rem; margin: 4px 0 12px; }
+  .type__specs { gap: 10px 16px; padding-block: 12px; }
+  .type__specs dd { font-size: 1rem; line-height: 1.25; margin: 0; }
+  .type__specs dt { margin: 0 0 2px; }
+  .type__foot { flex-wrap: nowrap; gap: 12px; margin-top: 14px; }
+  .type__price { font-size: 1.5rem; }
+  .type__foot .btn { flex: none; }
+  .type__badge { top: 14px; left: 14px; padding: 6px 12px; font-size: .6875rem; }
+}
